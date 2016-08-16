@@ -12,10 +12,44 @@
 	<div id="app">
 		
 	</div>
+	<br>
+	<div id="app2">
+		
+	</div>
 	<script src="react/build/react.js"></script>
 	<script src="react/build/react-dom.js"></script>
 	<script>
-		
+		ReactDOM.render(
+			React.DOM.h1(
+				{ 
+					id: "my-heading",
+					className: "preety",
+					htmlFor: "me",
+					style: {
+						background: "red",
+						color: "white"
+					}
+				},
+				React.DOM.span(null,
+					React.DOM.em(null,"hell "),
+					"o"
+				),
+				React.DOM.em(null,"Yolo")
+			),
+			document.getElementById("app")
+		);
+
+		var Component = React.createClass({
+			render: function(){
+				return React.DOM.span(null, "I'm so custom");
+			}
+		});
+
+		ReactDOM.render(
+			React.createElement(Component),
+			document.getElementById("app2")
+		);
+
 	</script>
 </body>
 </html>
