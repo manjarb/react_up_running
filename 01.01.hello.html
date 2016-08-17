@@ -16,9 +16,29 @@
 	<div id="app2">
 		
 	</div>
+	<br>
+	<div id="app3">
+		
+	</div>
+	<br>
+	<div id="app4">
+		
+	</div>
+	<br>
+	<div id="app5">
+		
+	</div>
+	<br>
+	<div id="app6">
+		
+	</div>
+
 	<script src="react/build/react.js"></script>
 	<script src="react/build/react-dom.js"></script>
 	<script>
+
+		// Render DOM
+
 		ReactDOM.render(
 			React.DOM.h1(
 				{ 
@@ -39,16 +59,114 @@
 			document.getElementById("app")
 		);
 
+		// Render DOM
+
+		// Create Class
+
 		var Component = React.createClass({
 			render: function(){
-				return React.DOM.span(null, "I'm so custom");
+				return React.DOM.span(null, "I'm so custom " + this.props.name);
 			}
 		});
 
 		ReactDOM.render(
-			React.createElement(Component),
+			React.createElement(Component, {
+				name: "hey boy"
+			}),
 			document.getElementById("app2")
 		);
+
+		// Create Class
+
+		// Create Factory
+
+		var ComponentFactory = React.createFactory(Component);
+
+		ReactDOM.render(
+			React.createElement(Component, {
+				name: "Yo girl"
+			}),
+			document.getElementById("app3")
+		);		
+
+		// Create Factory
+
+		// PropTypes
+
+		var ComponentProp = React.createClass({
+			propTypes: {
+				name: React.PropTypes.string.isRequired,
+			},
+			render: function(){
+				return React.DOM.span(null, "PropTypes Test " + this.props.name);
+			}
+		});
+
+		ReactDOM.render(
+			React.createElement(ComponentProp, {
+				name: "hey poeple"
+			}),
+			document.getElementById("app4")
+		);
+
+		// PropTypes		
+
+		// Text area update
+
+		var TextAreaCounter = React.createClass({
+			propTypes: {
+				text: React.PropTypes.string,
+			},
+
+			getDefaultProps: function(){
+				return {
+					text: "",
+				};
+			},
+			getInitialState: function(){
+				return {
+					text: this.props.text,
+				};
+			},
+			_textChange: function(ev){
+				this.setState({
+					text: ev.target.value
+				});
+			},
+
+			render: function(){
+				return React.DOM.div(null,
+					React.DOM.textarea({
+						value: this.state.text,
+						onChange: this._textChange,
+					}),
+					React.DOM.h3(null, this.state.text.length)
+				);
+			}
+
+		});
+
+		ReactDOM.render(
+			React.createElement(TextAreaCounter,{
+				text: "Bob",
+			}),
+			document.getElementById("app5")
+		);
+
+		// Text area update
+
+		// Accest exit DOM
+
+		var myTextAreaCounter = ReactDOM.render(
+			React.createElement(TextAreaCounter,{
+				defaultValue: "Bob"
+			}),
+			document.getElementById("app6")
+		);
+
+		myTextAreaCounter.setState({text: "Yo man whatt"});
+
+		// Accest exit DOM
 
 	</script>
 </body>
