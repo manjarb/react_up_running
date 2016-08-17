@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="467e56a5-c4bd-4e6d-9f99-607f3917a06d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01.01.hello.html" afterPath="$PROJECT_DIR$/01.01.hello.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataExcel.html" afterPath="$PROJECT_DIR$/dataExcel.html" />
     </list>
     <ignored path="react_up_running.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +25,8 @@
       <file leaf-file-name="dataExcel.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dataExcel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+            <state relative-caret-position="154">
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -130,12 +129,12 @@
       <option name="presentableId" value="Default" />
       <updated>1471460912434</updated>
       <workItem from="1471460913955" duration="143000" />
-      <workItem from="1471461110721" duration="1122000" />
+      <workItem from="1471461110721" duration="1464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1265000" />
+    <option name="totallyTimeSpent" value="1607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="837" extended-state="6" />
@@ -177,8 +176,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dataExcel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+        <state relative-caret-position="154">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
           <folding />
         </state>
       </provider>
